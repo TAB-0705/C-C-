@@ -34,3 +34,44 @@ int main() {
     return 0;
 }
 
+#Admission program
+#include <stdio.h>
+
+int main() {
+ 
+    int math;
+    int phys;
+    int chem;
+    int total;
+    int total_P_M;
+    int a;
+    a = 0;
+    
+    printf("Enter the marks in Mathematics:\n");
+    scanf("%d",&math);
+    printf("Enter the marks in chemistry:\n");
+    scanf("%d",&chem);
+    printf("Enter the marks in physics:\n");
+    scanf("%d",&phys);
+    
+    total = math + phys + chem;
+    total_P_M = math + phys;
+    
+    if(math>=60){
+        if(phys>=50){
+            if(chem>=40){
+                if(total>=200){
+                    if(total_P_M>=150){
+                        printf("You are eligible");
+                        a ++;
+                    }
+                }
+            }
+        }
+    }
+    if(a == 0){
+        printf("You are not eligible");
+    }
+    
+    return 0;
+}
