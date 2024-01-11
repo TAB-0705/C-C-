@@ -33,6 +33,32 @@ int main() {
     }
     return 0;
 }
+#chocolate program
+#include <stdio.h>
+
+int main(){
+    int x;
+    printf("Enter the registration number:");
+    scanf("%d",&x);
+
+    if(0<=x<=9223372036854775807){
+        int y;
+        y = x%10;
+        if(y==5){
+            int z;
+            z = x*x;
+            printf("You will receive %d chocolates",z);
+        }
+        else{
+            printf("You are not eligible");
+        }
+    }
+    else{
+        printf("You are not eligible");
+    }
+    return 0;
+}
+
 
 #Admission program
 #include <stdio.h>
@@ -44,8 +70,7 @@ int main() {
     int chem;
     int total;
     int total_P_M;
-    int a;
-    a = 0;
+
     
     printf("Enter the marks in Mathematics:\n");
     scanf("%d",&math);
@@ -63,15 +88,31 @@ int main() {
                 if(total>=200){
                     if(total_P_M>=150){
                         printf("You are eligible");
-                        a ++;
                     }
+                    else{
+                        printf("You are not eligible");
+                    }
+
                 }
+                else{
+                    printf("You are not eligible");
+                }
+                    
             }
+            else{
+                printf("You are not eligible");
+            }
+                    
+        }
+        else{
+            printf("You are not eligible");
         }
     }
-    if(a == 0){
+    else{
         printf("You are not eligible");
     }
+                        
+    
     
     return 0;
 }
