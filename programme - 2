@@ -1,0 +1,24 @@
+Fibonacci series
+#include <stdio.h>
+int main(){
+    int i;
+    int j;
+    int sum;
+    int terms;
+    printf("Enter the number of terms:\n");
+    scanf("%d",terms);
+    
+    i = 0;
+    j = 1;
+    for(int l = 0;l<terms;l++){
+        printf("%d",i);
+        sum = i + j;
+        i = j;
+        j = sum;
+    }
+    
+    
+    
+    return 0;
+}
+
