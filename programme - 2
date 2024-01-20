@@ -37,6 +37,21 @@ int main(){
     else{
         goto escape;
     }
+   check:
+        if((x*x)%2==0){
+            printf("%d is a even number",x*x);
+        }
+        else{
+            printf("%d is a odd number",x*x);
+        }
+        return 0;
+    
+    escape:
+        printf("Enter a valid positive number");
+        return 0;
+    return 0;
+}
+
 
 Sales of year
 #include <stdio.h>
@@ -130,18 +145,4 @@ int main(){
     return 0;
 }
 
-    check:
-        if((x*x)%2==0){
-            printf("%d is a even number",x*x);
-        }
-        else{
-            printf("%d is a odd number",x*x);
-        }
-        return 0;
-    
-    escape:
-        printf("Enter a valid positive number");
-        return 0;
-    return 0;
-}
-
+ 
