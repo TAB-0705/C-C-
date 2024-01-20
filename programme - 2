@@ -37,7 +37,99 @@ int main(){
     else{
         goto escape;
     }
+
+Sales of year
+#include <stdio.h>
+
+int main(){
+    int i = 1;
+    int total = 0;
+    float average = 0;
+    int high = 0;
+    int low = 100;
+    int x;
+    int Hmonth;
+    int Lmonth;
     
+    for(i;i<=12;i++){
+        printf("Enter the sales of month %d:",i);
+        scanf("%d",&x);
+        total += x;
+        if(x>high){
+            high = x;
+            Hmonth = i;
+        }
+        
+        if(low>x){
+            low = x;
+            Lmonth = i;
+        }
+    }
+    
+    average = (float)total/12;
+    
+    printf("Total sales of the year is %d\n",total);
+    printf("Average sales of the year is %.2f\n",average);
+    printf("Highest sales of the year is month%d\n",Hmonth);
+    printf("Lowest sales of the year is month%d\n",Lmonth);
+    return 0;
+
+Finding element present or not
+#include <stdio.h>
+int main(){
+    int x;
+    int y;
+    int z = 0;
+    int arr[20];
+     
+    printf("Enter the number of elements in array:\n");
+    scanf("%d",&x);
+    
+    for(int i = 0;i<x;i++){
+        printf("Enter the number:\n");
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the number need to be found:\n");
+    scanf("%d",&y);
+    for(int j = 0;j<x;j++){
+        if(arr[j] == y){
+            printf("The number found");
+            z++;
+            break;
+        }
+    }
+    
+    if(z == 0){
+        printf("The number not found");
+    }
+    return 0;
+}
+
+Date
+#include <stdio.h>
+int main(){
+    int days;
+    int weeks;
+    int daysl;
+    int x;
+    int y;
+    
+    printf("Enter the number of months to be calculated:\n");
+    scanf("%d",&x);
+    
+    for(int i = 0;i<x;i++){
+        printf("Print the number of days in month:\n");
+        scanf("%d",&y);
+        days += y;
+    }
+    weeks = days/7;
+    daysl = days%7;
+    printf("Number of days is %d\n",days);
+    printf("Number of weeks is %d\n",weeks);
+    printf("Number of days could not get evened out is %d\n",daysl);
+    return 0;
+}
+
     check:
         if((x*x)%2==0){
             printf("%d is a even number",x*x);
