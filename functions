@@ -31,3 +31,65 @@ void special(int x){
         printf("%d is not a special number",y);
     }
 }
+
+Swap numbers
+#include <stdio.h>
+int main(){
+   float x;
+   float y;
+
+   printf("Enter two numbers:");
+   scanf("%f %f",&x,&y);
+
+   float *Xx;
+   float *Yy;
+
+   Xx = &y;
+   Yy = &x;
+
+   printf("%.2f %.2f",*Xx,*Yy);
+
+
+   return 0;
+}
+
+Vehicle
+#include <stdio.h>
+int main(){
+    int x;
+
+    printf("Enter the number of customers:");
+    scanf("%d",&x);
+
+    int arr[x][3];
+
+    for(int i = 0;i<x;i++){
+        printf("Enter the vehicle number and number of hours to be parked:");
+        for(int j = 0;j<2;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    for(int k = 0;k<x;k++){
+        int price;
+        int a;
+        if(arr[k][1]>=24){
+            a = arr[k][1]%24;
+            price = 80 + a*5;
+            arr[k][2] = price;
+        }
+        else{
+            a = arr[k][1]%3;
+            price = 30 + a*5;
+            arr[k][2] = price;
+        }
+    }
+    for(int l=0;l<x;l++){
+        for(int m=0;m<3;m++){
+            printf("%d ",arr[l][m]);
+        }
+        printf("\n");
+    }
+    
+
+    return 0;
+}
